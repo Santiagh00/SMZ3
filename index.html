@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog de Motos - Tu Pasión Sobre Ruedas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <nav class="nav">
+        <h1 class="logo">MOTO BLOG</h1>
+        <ul class="nav-menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#motos">Motos</a></li>
+          <li><a href="#comentarios">Comentarios</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Descubre el Mundo de las Motos</h2>
+        <p>Tu guía completa sobre los diferentes tipos de motocicletas</p>
+        <a href="#motos" class="btn-primary">Ver Motos</a>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN MOTOS ===== -->
+    <section id="motos" class="motos-section">
+      <div class="container">
+        <h2 class="section-title">Tipos de Motocicletas</h2>
+
+        <div class="moto-card" data-moto="urbana">
+          <div class="moto-image">
+            <img src="public/MotoUrbana.png" alt="Moto Urbana">
+          </div>
+          <div class="moto-info">
+            <h3>Moto Urbana</h3>
+            <p class="moto-excerpt">Perfectas para la ciudad, ágiles y económicas...</p>
+            <button class="btn-secondary" onclick="abrirModal('urbana')">Ver más</button>
+          </div>
+        </div>
+
+        <div class="moto-card" data-moto="deportiva">
+          <div class="moto-image">
+            <img src="public/MotoDeportiva.png" alt="Moto Deportiva">
+          </div>
+          <div class="moto-info">
+            <h3>Moto Deportiva</h3>
+            <p class="moto-excerpt">Velocidad, aerodinámica y tecnología de punta...</p>
+            <button class="btn-secondary" onclick="abrirModal('deportiva')">Ver más</button>
+          </div>
+        </div>
+
+        <div class="moto-card" data-moto="cruiser">
+          <div class="moto-image">
+            <img src="public/MotoCruiser.png" alt="Moto Cruiser">
+          </div>
+          <div class="moto-info">
+            <h3>Moto Cruiser</h3>
+            <p class="moto-excerpt">Estilo clásico y confort en carretera...</p>
+            <button class="btn-secondary" onclick="abrirModal('cruiser')">Ver más</button>
+          </div>
+        </div>
+
+        <div class="moto-card" data-moto="doble-proposito">
+          <div class="moto-image">
+            <img src="public/MotoDobleProposito.png" alt="Moto Doble Propósito">
+          </div>
+          <div class="moto-info">
+            <h3>Moto Doble Propósito</h3>
+            <p class="moto-excerpt">Versatilidad para ciudad y aventura...</p>
+            <button class="btn-secondary" onclick="abrirModal('doble-proposito')">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN COMENTARIOS ===== -->
+    <section id="comentarios" class="comentarios-section">
+      <div class="container">
+        <h2 class="section-title">Déjanos tu Comentario</h2>
+    
+    <!-- MENSAJE DE ÉXITO FUERA DEL FORM -->
+    <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+        ✅ ¡Gracias por tu comentario! Lo hemos recibido correctamente.
+    </div>
+
+    <div class="form-wrapper">
+      <!-- IMPORTANTE: onsubmit="return false;" para prevenir envío -->
+        <form id="comentarioForm" class="comentario-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" rows="5" placeholder="Escribe tu comentario sobre la página..."></textarea>
+          </div>
+          <button type="button" class="btn-primary" id="btnEnviar">Enviar Comentario</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>&copy; 2024 Moto Blog - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- ===== MODAL (solo una X, sin duplicados) ===== -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,17 @@
+{
+  "name": "blog-motos",
+  "version": "1.0.0",
+  "description": "Blog de motos con comentarios en CSV",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["blog", "motos", "express", "csv"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
